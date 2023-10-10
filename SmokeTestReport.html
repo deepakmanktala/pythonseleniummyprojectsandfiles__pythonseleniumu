@@ -1,0 +1,42 @@
+
+Running tests... 
+----------------------------------------------------------------------
+ test_email_home_page (fbtests.HomePageTest) ... OK (23.293545)s
+ test_fb_login (fbtests.HomePageTest) ... ERROR (25.111365)s
+ test_fb_login_with_lambda (fbtests.HomePageTest) ... ERROR (53.799188)s
+ test_fb_password (fbtests.HomePageTest) ... OK (21.043668)s
+ test_search_by_category (firsttest.SearchTest) ... OK (57.387699)s
+ test_search_by_name (firsttest.SearchTest) ... OK (78.980745)s
+
+======================================================================
+ERROR [25.111365s]: test_fb_login (fbtests.HomePageTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\owner\PycharmProjects\untitled\Unittest\fbtests.py", line 42, in test_fb_login
+    wait.until( EC.visibility_of_element_located(self.driver.find_element_by_xpath("//*[contains(@id,'u_0_4')]"))).click()
+  File "C:\Users\owner\AppData\Local\Programs\Python\Python36-32\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(self._driver)
+  File "C:\Users\owner\AppData\Local\Programs\Python\Python36-32\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 127, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "C:\Users\owner\AppData\Local\Programs\Python\Python36-32\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 397, in _find_element
+    return driver.find_element(*by)
+AttributeError: 'HomePageTest' object has no attribute 'find_element'
+
+======================================================================
+ERROR [53.799188s]: test_fb_login_with_lambda (fbtests.HomePageTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\owner\PycharmProjects\untitled\Unittest\fbtests.py", line 59, in test_fb_login_with_lambda
+    lambda driver: driver.find_element_by_xpath( loginButtonXpath ) )
+  File "C:\Users\owner\AppData\Local\Programs\Python\Python36-32\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0:04:19
+
+FAILED
+ (Errors=2)
+
+Generating HTML reports... 
